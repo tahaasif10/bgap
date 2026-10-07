@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #060608;
+  --foreground: #f6ede2;
 }
 
 @theme inline {
@@ -10,17 +10,112 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-serif: var(--font-cinzel, serif);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #060608;
+  color: #f6ede2;
+  overflow-x: hidden;
+  selection-background-color: #d4af37;
+  selection-color: #000000;
+}
+
+::selection {
+  background: #d4af37;
+  color: #060608;
+}
+
+/* Luxury Gold Text Gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f5d77f 0%, #fff5c0 25%, #c59740 50%, #f3db98 75%, #a67926 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-subtle {
+  background: linear-gradient(135deg, #f3d483 0%, #b88628 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-light {
+  background: linear-gradient(135deg, #fffbeb 0%, #e2be6c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Metallic Gold Buttons & Accents */
+.bg-gold-metallic {
+  background: linear-gradient(135deg, #e5c378 0%, #faebb0 35%, #c69943 70%, #e5c57b 100%);
+}
+
+.bg-gold-metallic-hover {
+  background: linear-gradient(135deg, #f2d48f 0%, #fff4c4 35%, #d6a851 70%, #f0d28b 100%);
+}
+
+.bg-gold-subtle {
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.08) 0%, rgba(212, 175, 55, 0.02) 100%);
+}
+
+/* Luxury Glows & Borders */
+.border-gold-subtle {
+  border: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+.border-gold-glow {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 0 25px -4px rgba(212, 175, 55, 0.25);
+}
+
+.gold-glow {
+  box-shadow: 0 0 50px rgba(212, 175, 55, 0.15);
+}
+
+.gold-glow-lg {
+  box-shadow: 0 0 90px rgba(212, 175, 55, 0.12);
+}
+
+/* Animations */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(245, 215, 127, 0.12) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 5s infinite linear;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.08);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 10s infinite ease-in-out;
 }
