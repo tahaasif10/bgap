@@ -1,0 +1,198 @@
+{
+  "buildId": "f4c7b762-2c0e-4c0f-8a76-67b5862c7ae1",
+  "trailingSlash": false,
+  "routes": [
+    {
+      "route": "/",
+      "status": "rendered",
+      "revalidate": false,
+      "router": "app",
+      "tags": [
+        "/",
+        "_N_T_/",
+        "_N_T_/index",
+        "_N_T_/layout",
+        "_N_T_/page"
+      ],
+      "headers": {
+        "link": "</_next/static/_vinext_fonts/fraunces-f3fc7530f62a/fraunces-8ca9c2a4.woff2>; rel=preload; as=font; type=font/woff2; crossorigin, </_next/static/_vinext_fonts/figtree-09ae0f11b8e6/figtree-7073ac15.woff2>; rel=preload; as=font; type=font/woff2; crossorigin"
+      }
+    },
+    {
+      "route": "/about",
+      "status": "rendered",
+      "revalidate": false,
+      "router": "app",
+      "tags": [
+        "/about",
+        "_N_T_/about",
+        "_N_T_/layout",
+        "_N_T_/about/layout",
+        "_N_T_/about/page"
+      ],
+      "headers": {
+        "link": "</_next/static/_vinext_fonts/fraunces-f3fc7530f62a/fraunces-8ca9c2a4.woff2>; rel=preload; as=font; type=font/woff2; crossorigin, </_next/static/_vinext_fonts/figtree-09ae0f11b8e6/figtree-7073ac15.woff2>; rel=preload; as=font; type=font/woff2; crossorigin"
+      }
+    },
+    {
+      "route": "/advisory-committee",
+      "status": "rendered",
+      "revalidate": false,
+      "router": "app",
+      "tags": [
+        "/advisory-committee",
+        "_N_T_/advisory-committee",
+        "_N_T_/layout",
+        "_N_T_/advisory-committee/layout",
+        "_N_T_/advisory-committee/page"
+      ],
+      "headers": {
+        "link": "</_next/static/_vinext_fonts/fraunces-f3fc7530f62a/fraunces-8ca9c2a4.woff2>; rel=preload; as=font; type=font/woff2; crossorigin, </_next/static/_vinext_fonts/figtree-09ae0f11b8e6/figtree-7073ac15.woff2>; rel=preload; as=font; type=font/woff2; crossorigin"
+      }
+    },
+    {
+      "route": "/contact",
+      "status": "rendered",
+      "revalidate": false,
+      "router": "app",
+      "tags": [
+        "/contact",
+        "_N_T_/contact",
+        "_N_T_/layout",
+        "_N_T_/contact/layout",
+        "_N_T_/contact/page"
+      ],
+      "headers": {
+        "link": "</_next/static/_vinext_fonts/fraunces-f3fc7530f62a/fraunces-8ca9c2a4.woff2>; rel=preload; as=font; type=font/woff2; crossorigin, </_next/static/_vinext_fonts/figtree-09ae0f11b8e6/figtree-7073ac15.woff2>; rel=preload; as=font; type=font/woff2; crossorigin"
+      }
+    },
+    {
+      "route": "/excellence",
+      "status": "rendered",
+      "revalidate": false,
+      "router": "app",
+      "tags": [
+        "/excellence",
+        "_N_T_/excellence",
+        "_N_T_/layout",
+        "_N_T_/excellence/layout",
+        "_N_T_/excellence/page"
+      ],
+      "headers": {
+        "link": "</_next/static/_vinext_fonts/fraunces-f3fc7530f62a/fraunces-8ca9c2a4.woff2>; rel=preload; as=font; type=font/woff2; crossorigin, </_next/static/_vinext_fonts/figtree-09ae0f11b8e6/figtree-7073ac15.woff2>; rel=preload; as=font; type=font/woff2; crossorigin"
+      }
+    },
+    {
+      "route": "/join-us",
+      "status": "rendered",
+      "revalidate": false,
+      "router": "app",
+      "tags": [
+        "/join-us",
+        "_N_T_/join-us",
+        "_N_T_/layout",
+        "_N_T_/join-us/layout",
+        "_N_T_/join-us/page"
+      ],
+      "headers": {
+        "link": "</_next/static/_vinext_fonts/fraunces-f3fc7530f62a/fraunces-8ca9c2a4.woff2>; rel=preload; as=font; type=font/woff2; crossorigin, </_next/static/_vinext_fonts/figtree-09ae0f11b8e6/figtree-7073ac15.woff2>; rel=preload; as=font; type=font/woff2; crossorigin"
+      }
+    },
+    {
+      "route": "/members/individual",
+      "status": "rendered",
+      "revalidate": false,
+      "router": "app",
+      "tags": [
+        "/members/individual",
+        "_N_T_/members/individual",
+        "_N_T_/layout",
+        "_N_T_/members/layout",
+        "_N_T_/members/individual/layout",
+        "_N_T_/members/individual/page"
+      ],
+      "headers": {
+        "link": "</_next/static/_vinext_fonts/fraunces-f3fc7530f62a/fraunces-8ca9c2a4.woff2>; rel=preload; as=font; type=font/woff2; crossorigin, </_next/static/_vinext_fonts/figtree-09ae0f11b8e6/figtree-7073ac15.woff2>; rel=preload; as=font; type=font/woff2; crossorigin"
+      }
+    },
+    {
+      "route": "/members/institutes",
+      "status": "rendered",
+      "revalidate": false,
+      "router": "app",
+      "tags": [
+        "/members/institutes",
+        "_N_T_/members/institutes",
+        "_N_T_/layout",
+        "_N_T_/members/layout",
+        "_N_T_/members/institutes/layout",
+        "_N_T_/members/institutes/page"
+      ],
+      "headers": {
+        "link": "</_next/static/_vinext_fonts/fraunces-f3fc7530f62a/fraunces-8ca9c2a4.woff2>; rel=preload; as=font; type=font/woff2; crossorigin, </_next/static/_vinext_fonts/figtree-09ae0f11b8e6/figtree-7073ac15.woff2>; rel=preload; as=font; type=font/woff2; crossorigin"
+      }
+    },
+    {
+      "route": "/404",
+      "status": "rendered",
+      "revalidate": false,
+      "router": "app"
+    }
+  ],
+  "pregeneratedConcretePaths": [
+    [
+      "/",
+      [
+        "/"
+      ]
+    ],
+    [
+      "/about",
+      [
+        "/about"
+      ]
+    ],
+    [
+      "/advisory-committee",
+      [
+        "/advisory-committee"
+      ]
+    ],
+    [
+      "/contact",
+      [
+        "/contact"
+      ]
+    ],
+    [
+      "/excellence",
+      [
+        "/excellence"
+      ]
+    ],
+    [
+      "/join-us",
+      [
+        "/join-us"
+      ]
+    ],
+    [
+      "/members/individual",
+      [
+        "/members/individual"
+      ]
+    ],
+    [
+      "/members/institutes",
+      [
+        "/members/institutes"
+      ]
+    ],
+    [
+      "/404",
+      [
+        "/404"
+      ]
+    ]
+  ]
+}

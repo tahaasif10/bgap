@@ -1,0 +1,1 @@
+import{M as e,j as t}from"./vinext-stage-runtime~0virtual_vinext-response-stage~0virtual_vinext-request-stage-BBvGezkB.js";async function n(n){let r=t(n.params,n.rootParamNamesByPattern[n.pattern]);return e(r,()=>n.fn(n.rejectEmptyResults?{params:n.params,rejectEmptyResults:!0}:{params:n.params}))}export{n as t};

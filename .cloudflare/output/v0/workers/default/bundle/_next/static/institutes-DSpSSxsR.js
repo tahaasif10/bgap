@@ -1,0 +1,1 @@
+var e=Array.from({length:12},(e,t)=>({id:String(t+1),name:`Institute ${t+1}`}));export{e as t};

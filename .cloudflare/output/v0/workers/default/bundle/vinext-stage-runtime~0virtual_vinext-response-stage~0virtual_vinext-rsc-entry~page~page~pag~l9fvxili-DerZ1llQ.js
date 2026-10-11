@@ -1,0 +1,1 @@
+import{t as e}from"./vinext-stage-runtime~0virtual_vinext-response-stage~0virtual_vinext-rsc-entry~page~page~pag~o4vdgo9i-D2gQLiZm.js";function t(...e){return e.filter(Boolean).join(` `)}var n=e();function r({className:e,...r}){return(0,n.jsx)(`div`,{className:t(`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8`,e),...r})}export{t as n,r as t};

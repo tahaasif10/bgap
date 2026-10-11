@@ -1,0 +1,1 @@
+import{a as e}from"./vinext-stage-runtime~0virtual_vinext-response-stage~0virtual_vinext-rsc-entry~cache-callabl~ogu4w6l9-BCEwSjG9.js";var t=e(()=>{throw Error(`Unexpectedly client reference export 'default' is called on server`)},`c2747888630f`,`default`);export{t};

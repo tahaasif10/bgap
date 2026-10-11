@@ -1,0 +1,87 @@
+{
+  "appPaths": [
+    "/",
+    "/about",
+    "/advisory-committee",
+    "/contact",
+    "/excellence",
+    "/join-us",
+    "/members/individual",
+    "/members/institutes"
+  ],
+  "buildId": "f4c7b762-2c0e-4c0f-8a76-67b5862c7ae1",
+  "buildIdentity": "8053dc3b5285a7864c04e31a478a94b7",
+  "loadingBoundaryRoutePatterns": [
+    "/"
+  ],
+  "rscBuildId": "8053dc3b5285a7864c04e31a478a94b7",
+  "routePatterns": {
+    "/": {
+      "kind": "app-page",
+      "pattern": "/",
+      "cacheabilityProbe": {
+        "canPrunePattern": true
+      }
+    },
+    "/about": {
+      "kind": "app-page",
+      "pattern": "/about",
+      "cacheabilityProbe": {
+        "canPrunePattern": true
+      }
+    },
+    "/advisory-committee": {
+      "kind": "app-page",
+      "pattern": "/advisory-committee",
+      "cacheabilityProbe": {
+        "canPrunePattern": true
+      }
+    },
+    "/contact": {
+      "kind": "app-page",
+      "pattern": "/contact",
+      "cacheabilityProbe": {
+        "canPrunePattern": true
+      }
+    },
+    "/excellence": {
+      "kind": "app-page",
+      "pattern": "/excellence",
+      "cacheabilityProbe": {
+        "canPrunePattern": true
+      }
+    },
+    "/join-us": {
+      "kind": "app-page",
+      "pattern": "/join-us",
+      "cacheabilityProbe": {
+        "canPrunePattern": true
+      }
+    },
+    "/members/individual": {
+      "kind": "app-page",
+      "pattern": "/members/individual",
+      "cacheabilityProbe": {
+        "canPrunePattern": true
+      }
+    },
+    "/members/institutes": {
+      "kind": "app-page",
+      "pattern": "/members/institutes",
+      "cacheabilityProbe": {
+        "canPrunePattern": true
+      }
+    }
+  },
+  "trailingSlash": false,
+  "paths": [
+    "/",
+    "/about",
+    "/advisory-committee",
+    "/contact",
+    "/excellence",
+    "/join-us",
+    "/members/individual",
+    "/members/institutes"
+  ]
+}

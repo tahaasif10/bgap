@@ -1,0 +1,1 @@
+import{t as e}from"./vinext-stage-runtime~0virtual_vinext-rsc-entry~0virtual_vinext-request-stage-ClmjxpaR.js";function t(t){let n=e(t);return Object.assign(n,{handleResponseStage(e,n,r,i){return import(`./vinext-stage-runtime~0virtual_vinext-response-stage-hDkjB8PE.js`).then(e=>e.V).then(({renderAppWorkerResponseStage:a})=>a(t,e,n,r,i))}})}export{t};

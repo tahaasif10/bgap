@@ -1,0 +1,1 @@
+globalThis.__VINEXT_PREGENERATED_CONCRETE_PATHS = [["/",["/"]],["/about",["/about"]],["/advisory-committee",["/advisory-committee"]],["/contact",["/contact"]],["/excellence",["/excellence"]],["/join-us",["/join-us"]],["/members/individual",["/members/individual"]],["/members/institutes",["/members/institutes"]],["/404",["/404"]]];
