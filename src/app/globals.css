@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand blue */
+  --color-brand-50: #eef3fc;
+  --color-brand-100: #dce6f8;
+  --color-brand-300: #8fadea;
+  --color-brand-500: #3b73d6;
+  --color-brand-600: #2057b8;
+  --color-brand-700: #1a459a;
+  --color-brand-800: #14377a;
+  --color-brand-900: #0f2a5c;
+  --color-brand-950: #0a1b3d;
+
+  /* Brand red (use sparingly: CTAs, active states) */
+  --color-accent-50: #fdecee;
+  --color-accent-500: #e03545;
+  --color-accent-600: #c8202f;
+  --color-accent-700: #a81926;
+
+  /* Neutrals */
+  --color-paper: #f6f8fb;
+  --color-ink: #0e1726;
+  --color-muted: #5b6678;
+  --color-line: #dce2ec;
+}
+
+/* Fonts come from next/font variables set in layout.tsx */
+@theme inline {
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight text-balance;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-500;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
