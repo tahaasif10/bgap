@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { Button } from "@/components/ui/Button";
 import { Input, Textarea } from "@/components/ui/Field";
+import { submitForm } from "@/lib/submitForm";
 import { cn } from "@/lib/utils";
 
 type Kind = "individual" | "institute";
+type Status = "idle" | "sending" | "success" | "error";
 
 const options: { value: Kind; label: string }[] = [
   { value: "individual", label: "Individual" },
@@ -13,14 +15,36 @@ const options: { value: Kind; label: string }[] = [
 ];
 
 // TODO: fields are minimal until the client confirms what to collect.
-// TODO (Phase 5): validation, saving to the database, and email notifications.
 export function JoinForm() {
   const [kind, setKind] = useState<Kind>("individual");
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
 
   function choose(k: Kind) {
     setKind(k);
-    setSent(false);
+    setStatus("idle");
+  }
+
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget; // keep a reference, it is cleared after an await
+    const data = Object.fromEntries(new FormData(form).entries()) as Record<string, string>;
+
+    setStatus("sending");
+    const result = await submitForm({
+      ...data,
+      form: "join",
+      type: kind,
+      // institutes fill "contact person"; the sheet also stores it as the name
+      name: kind === "institute" ? data.contact ?? "" : data.name ?? "",
+      consent: data.consent ? "Yes" : "No",
+    });
+
+    if (result.ok) {
+      form.reset();
+      setStatus("success");
+    } else {
+      setStatus("error");
+    }
   }
 
   return (
@@ -48,14 +72,7 @@ export function JoinForm() {
       </div>
 
       {/* key resets the fields when switching type */}
-      <form
-        key={kind}
-        className="mt-6 space-y-5"
-        onSubmit={(e) => {
-          e.preventDefault();
-          setSent(true);
-        }}
-      >
+      <form key={kind} className="mt-6 space-y-5" onSubmit={onSubmit}>
         {kind === "individual" ? (
           <>
             <Input label="Full name" name="name" autoComplete="name" required />
@@ -78,13 +95,31 @@ export function JoinForm() {
         )}
         <Textarea label="Anything you would like us to know (optional)" name="message" />
 
-        <Button type="submit" variant="accent" size="lg">
-          Submit request
+        <label className="flex items-start gap-3 text-sm text-muted">
+          <input type="checkbox" name="consent" required className="mt-0.5 size-4 accent-brand-700" />
+          <span>
+            I agree to my name and membership number being listed publicly on this website if my
+            request is approved.
+          </span>
+        </label>
+
+        {/* Spam trap: real visitors never see or fill this */}
+        <div aria-hidden className="absolute -left-[9999px]">
+          <input type="text" name="website" tabIndex={-1} autoComplete="off" />
+        </div>
+
+        <Button type="submit" variant="accent" size="lg" disabled={status === "sending"}>
+          {status === "sending" ? "Sending..." : "Submit request"}
         </Button>
 
-        {sent && (
+        {status === "success" && (
           <p role="status" className="rounded-md bg-brand-50 px-4 py-3 text-sm text-brand-800">
-            This form is not connected yet, so nothing was sent. Submissions will be enabled soon.
+            Thank you. We have received your request and will be in touch.
+          </p>
+        )}
+        {status === "error" && (
+          <p role="alert" className="rounded-md bg-accent-50 px-4 py-3 text-sm text-accent-700">
+            Something went wrong and your request was not sent. Please try again, or contact us directly.
           </p>
         )}
       </form>

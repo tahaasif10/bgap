@@ -9,6 +9,7 @@ const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", dis
 const figtree = Figtree({ subsets: ["latin"], variable: "--font-figtree", display: "swap" });
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: false },
   metadataBase: new URL(siteConfig.url),
   title: { default: `${siteConfig.name} | ${siteConfig.tagline}`, template: `%s | ${siteConfig.name}` },
   description: siteConfig.description,
